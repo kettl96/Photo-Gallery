@@ -7,7 +7,7 @@
 :root {
   --dark: #070707;
   --sizeIndex: calc(1vw + 1vh);
-  --transition: .75s cubic-bezier(.2, .6, 0, 1);
+  --transition: .45s cubic-bezier(.2, .6, 0, 1);
 }
 
 @font-face {

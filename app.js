@@ -36,9 +36,13 @@ sliderMain.on('slideChange', e => {
   sliderMain.activeIndex > 0 ? desc.classList.add('hidden') : desc.classList.remove('hidden')
 })
 
+
 const soundBtn = document.querySelector('.switch-btn')
 const aud = document.querySelector('.audio')
 
+sliderMain.on('slideChange', e => {
+  sliderMain.activeIndex > 0 ? soundBtn.style.opacity=0 : soundBtn.style.opacity=1
+})
 isPlay = true;
 const toggle = () => {
   if (isPlay) {
