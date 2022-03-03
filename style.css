@@ -118,5 +118,42 @@ body, html {
   transform: translateY(4vh);
 
 }
-
-.soundOff {}
+/* sound btn */
+.switch__container {
+  margin: 20px;
+  position: absolute;
+}
+.switch-btn {
+  display: inline-block;
+  width: 50px; /* ширина переключателя */
+  height: 10px; /* высота переключателя */
+  border-radius: 12px; /* радиус скругления */
+  background: #ffffffbe; /* цвет фона */
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+  content: "";
+  height: 25px; /* высота кнопки */
+  width: 25px; /* ширина кнопки */
+  border-radius: 18px; /* радиус кнопки */
+  background: linear-gradient(rgb(139, 4, 139), rgb(221, 52, 22), rgb(252, 43, 252)); /* цвет кнопки */
+  top: -8px; /* положение кнопки по вертикали относительно основы */
+  left: -6px; /* положение кнопки по горизонтали относительно основы */
+  transition-duration: 300ms; /* анимация */
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: rgb(248, 133, 133);
+  box-shadow: inset 0 0 10px 0 #c048acc4; /* тень */
+}
+.switch-on::after {
+  left: 30px;
+  background: linear-gradient(rgb(139, 4, 139), rgb(221, 52, 22), rgb(252, 43, 252));
+}

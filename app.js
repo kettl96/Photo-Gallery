@@ -1,5 +1,5 @@
 const sliderMain = new Swiper('.slider_main', {
-  freeMode:true,
+  freeMode: true,
   centeredSlides: true,
   mousewheel: true,
   parallax: true,
@@ -37,22 +37,19 @@ sliderMain.on('slideChange', e => {
 })
 
 
-// let a = new Audio();
-// a.src = `./assets/sound/ViceCity.mp3`;
-// a.play()
-// const state = {
-//   audio: new Audio(),
-//   isSoundOn: true,
-// }
-// let { audio, isSoundOn } = state
-
-// const loadSong = () => {
-//   audio.src = `./assets/sound/ViceCity.mp3`
-// }
-// loadSong()
-// function playAudio() {
-//   audio.play();
-// }
-
-// window.onload = playAudio()
-
+const soundBtn = document.querySelector('.switch-btn')
+const aud = document.querySelector('.audio')
+isPlay = true;
+const toggle = () => {
+  if (isPlay) {
+    aud.pause()
+    isPlay = false;
+    soundBtn.classList.add('switch-on')
+  }
+  else if (!isPlay) {
+    aud.play()
+    isPlay = true;
+    soundBtn.classList.remove('switch-on')
+  }
+}
+soundBtn.addEventListener('click', toggle)
