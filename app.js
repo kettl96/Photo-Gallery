@@ -36,9 +36,9 @@ sliderMain.on('slideChange', e => {
   sliderMain.activeIndex > 0 ? desc.classList.add('hidden') : desc.classList.remove('hidden')
 })
 
-
 const soundBtn = document.querySelector('.switch-btn')
 const aud = document.querySelector('.audio')
+
 isPlay = true;
 const toggle = () => {
   if (isPlay) {
@@ -53,3 +53,7 @@ const toggle = () => {
   }
 }
 soundBtn.addEventListener('click', toggle)
+function play() {
+  aud.play()
+}
+window.addEventListener('mousemove', play)
